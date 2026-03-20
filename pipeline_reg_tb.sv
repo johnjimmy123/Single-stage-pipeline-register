@@ -1,6 +1,4 @@
 `timescale 1ns/1ps
-`default_nettype none
-
 module pipe_reg_tb;
 
     localparam int width   = 32;
@@ -121,4 +119,4 @@ module pipe_reg_tb;
 
 endmodule
 
-`default_nettype wire
+

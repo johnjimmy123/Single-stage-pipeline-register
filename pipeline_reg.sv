@@ -1,4 +1,4 @@
-`default_nettype none
+
 
 module pipe_reg #(
     parameter int width = 32
@@ -49,4 +49,4 @@ module pipe_reg #(
 
 endmodule
 
-`default_nettype wire
+

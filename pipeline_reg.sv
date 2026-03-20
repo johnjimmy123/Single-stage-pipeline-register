@@ -19,7 +19,6 @@ module pipe_reg #(
     logic             full;
 
     assign out_valid = full;
-    assign out_data  = data_q;
     assign in_ready  = !full || (out_valid && out_ready);
 
     always_ff @(posedge clk or negedge rst_n)
@@ -38,6 +37,7 @@ module pipe_reg #(
             end
             else if (out_valid && out_ready && !(in_valid && in_ready))
             begin
+                out_data <= data_q;
                 full <= 1'b0;
             end
             else if (in_valid && in_ready && out_valid && out_ready)
